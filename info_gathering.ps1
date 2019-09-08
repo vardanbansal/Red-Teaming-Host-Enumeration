@@ -104,7 +104,7 @@ write-output $interestingFiles
 
 write-output ""
 write-output "------------------- Top 20 modified files ---------------------"
-$modifiedItems = (Get-ChildItem 'C:\Users' -recurse | Sort {$_.LastWriteTime} |  %{$_.FullName } | select -last 25 | ft -hidetableheaders | out-string)
+$modifiedItems = (Get-ChildItem 'C:\Users' -recurse | Sort {$_.LastWriteTime} |  %{$_.FullName } | select -last 20 | ft -hidetableheaders | out-string)
 write-output $modifiedItems
 
 write-output ""
